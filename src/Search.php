@@ -9,8 +9,9 @@ class Search
         if (preg_match_all("/(?:^|\D)((?:8|\+7)[\-\s\(\d\)]{10,})(?:\D|$)/", $s, $match)){
             $phoneArray = [];
             foreach ($match[1] as $phone){
-                $phoneArray[] = str_replace(['-','(',')', ' '], '', str_replace('+7', '8', trim($phone)));
-
+                $phone = str_replace(['-','(',')', ' '], '', str_replace('+7', '8', trim($phone)));
+                if (strlen($phone) == 11)
+                    $phoneArray[] = $phone;
             }
             return array_unique($phoneArray);
         }
