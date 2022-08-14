@@ -1,0 +1,16 @@
+{
+    "name": "ashishak/search_phone",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Ashishak\\SearchPhone\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Shishak Anton",
+            "email": "shishak-anton@yandex.ru"
+        }
+    ],
+    "require": {}
+}
